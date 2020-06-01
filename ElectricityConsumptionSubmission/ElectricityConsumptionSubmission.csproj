@@ -16,4 +16,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Charging\Charging.csproj" />
+    <ProjectReference Include="..\RabbitMq\RabbitMq.csproj" />
+  </ItemGroup>
+
 </Project>

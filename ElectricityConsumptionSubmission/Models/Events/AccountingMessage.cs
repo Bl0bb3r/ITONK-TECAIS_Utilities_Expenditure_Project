@@ -1,11 +1,12 @@
-﻿using System;
+﻿using RabbitMq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ElectricityConsumptionSubmission.Models.Events
 {
-    public class AccountingMessage //Eventbase is missing, will be given from RabbitMq
+    public class AccountingMessage : EventBase
     {
         public double Amount { get; }
         public int HouseId { get; }

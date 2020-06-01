@@ -1,18 +1,18 @@
-﻿using ElectricityConsumptionSubmission.Services;
+﻿using ElectricityConsumptionSubmission.Models
+using ElectricityConsumptionSubmission.Models.Events;
+using ElectricityConsumptionSubmission.Services;
 using log4net;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using RabbitMq;
 using System.Threading.Tasks;
 
 namespace ElectricityConsumptionSubmission.Handlers
 {
-    public class MeasurementReceivedEventHandler : IEventHandler<Measurement> //Missing from RabbitMq
+    public class MeasurementReceivedEventHandler : IEventHandler<Measurement>
     {
         private static readonly ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private readonly IChargingService _chargingService;
         private readonly IPricingService _pricingService;
-        private readonly IEventBus _eventBus; //Missing from RabbitMQ
+        private readonly IEventBus _eventBus;
 
         public MeasurementReceivedEventHandler(IChargingService chargingService, IPricingService pricingService, IEventBus eventBus)
         {

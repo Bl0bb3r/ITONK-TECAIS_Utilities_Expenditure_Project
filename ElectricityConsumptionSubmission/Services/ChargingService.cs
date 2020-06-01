@@ -1,11 +1,9 @@
-﻿using ElectricityConsumptionSubmission.Models;
-using log4net;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using ElectricityConsumptionSubmission.Models;
+using log4net;
+using Newtonsoft.Json;
 
 namespace ElectricityConsumptionSubmission.Services
 {
