@@ -4,7 +4,13 @@ using System.Text;
 
 namespace RabbitMq
 {
-    class EventBase
+    public abstract class EventBase
     {
+        public string EventType { get; }
+
+        public EventBase(string eventType)
+        {
+            EventType = eventType;
+        }
     }
 }

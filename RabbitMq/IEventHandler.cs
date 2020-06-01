@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace RabbitMq
 {
-    interface IEventHandler
+    public interface IEventHandler<TEvent>
     {
+        Task Handle(TEvent @event);
     }
 }

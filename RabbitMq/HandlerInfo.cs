@@ -4,7 +4,8 @@ using System.Text;
 
 namespace RabbitMq
 {
-    class HandlerInfo
+    public class HandlerInfo
     {
+        public Type HandlerType { get; set; }
     }
 }

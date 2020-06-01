@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
-
+using RabbitMQ.Client.Events;
 
 namespace RabbitMq
 {
@@ -44,7 +44,7 @@ channel.ExchangeDeclare(exchange: ExchangeName, type: "direct");
                 var body = Encoding.UTF8.GetBytes(message);
 
                 var properties = channel.CreateBasicProperties();
-                properties.DeliveryMode = 2; //persistent
+                properties.DeliveryMode = 2;
 
                 channel.BasicPublish(exchange: ExchangeName, routingKey: @event.EventType, basicProperties: properties,
                     body: body);
@@ -76,7 +76,7 @@ channel.ExchangeDeclare(exchange: ExchangeName, type: "direct");
             consumer.Received += async (model, ea) =>
             {
                 var eventName = ea.RoutingKey;
-                var message = Encoding.UTF8.GetString(ea.Body);
+                var message = Encoding.UTF8.GetString(ea.Body.Span);
 
                 await ProcessEvent(eventName, message);
                 channel.BasicAck(ea.DeliveryTag, multiple: false);
