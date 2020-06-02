@@ -1,4 +1,4 @@
-﻿using ElectricityConsumptionSubmission.Models;
+﻿using HeatConsumptionSubmission.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HeatConsumptionSubmission.Services
 {
-    interface IPricingService
+    public interface IPricingService
     {
         Task<PricingInformation> GetPricingInformationAsync();
     }

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMq", "RabbitMq\Rabbit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatConsumptionSubmission", "HeatConsumptionSubmission\HeatConsumptionSubmission.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

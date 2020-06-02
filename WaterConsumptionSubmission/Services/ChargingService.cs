@@ -1,13 +1,10 @@
-﻿using HeatConsumptionSubmission.Models;
-using log4net;
-using Newtonsoft.Json;
+﻿using log4net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace HeatConsumptionSubmission.Services
+namespace WaterConsumptionSubmission.Services
 {
     public class ChargingService : IChargingService
     {
@@ -25,15 +22,16 @@ namespace HeatConsumptionSubmission.Services
         {
             try
             {
-                var chargingInformation = await _httpClient.GetAsync("charging/info");
-                var responseAsString = await chargingInformation.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<ChargingInformation>(responseAsString);
-                _log.Info("Heat Charging-API return value: " + result.CurrentTaxRate);
-                return result;
+                var chargingInformationResult = await _httpClient.GetAsync("charging/info").ConfigureAwait(false);
+                var chargingInformationResultAsString = await chargingInformationResult.Content.ReadAsStringAsync();
+                var chargingInformationDeserialized = JsonConvert.DeserializeObject<ChargingInformation>(chargingInformationResultAsString);
+
+                _log.Info("Water Charging-API return value: " + chargingInformationDeserialized.CurrentTaxRate);
+                return chargingInformationDeserialized;
             }
             catch (Exception ex)
             {
-                _log.Error("Heat Charging-API failed with exception: " + ex);
+                _log.Error("Water Charging-API failed with exception: " + ex);
                 throw;
             }
         }
