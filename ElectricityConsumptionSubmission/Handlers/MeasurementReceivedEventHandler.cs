@@ -1,4 +1,4 @@
-﻿using ElectricityConsumptionSubmission.Models
+﻿using ElectricityConsumptionSubmission.Models;
 using ElectricityConsumptionSubmission.Models.Events;
 using ElectricityConsumptionSubmission.Services;
 using log4net;

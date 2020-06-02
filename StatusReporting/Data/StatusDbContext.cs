@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StatusReporting.Data
 {
-    public class StatusDbContext
+    public class StatusDbContext : DbContext
     {
         public StatusDbContext(DbContextOptions<StatusDbContext> options) : base(options) { }
         public DbSet<Status> Statuses { get; set; }
