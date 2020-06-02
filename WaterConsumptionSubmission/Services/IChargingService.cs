@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WaterConsumptionSubmission.Models;
 
 namespace WaterConsumptionSubmission.Services
 {
-    interface IChargingService
+    public interface IChargingService
     {
+        Task<ChargingInformation> GetChargingInformationForConsumerAsync(Guid deviceId);
     }
 }
