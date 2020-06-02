@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: status-sqlserver
+  namespace: itonk_tecais
+spec:
+  selector:
+    app: status-db
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-db
+  namespace: itonk_tecais
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: status-db
+  template:
+    metadata:
+      labels:
+        app: status-db
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: mssql
+          image: mcr.microsoft.com/mssql/server:2019-latest
+          ports:
+            - containerPort: 1433
+          env:
+            - name: MSSQL_PID
+              value: "Developer"
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_SA_PASSWORD
+              value: pass1234
+          volumeMounts:
+            - name: status-sql-vol
+              mountPath: /var/opt/mssql
+      volumes:
+        - name: status-sql-vol
+          persistentVolumeClaim:
+            claimName: status-sql-db-pvc

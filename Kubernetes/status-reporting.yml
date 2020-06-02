@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: itonk_tecais
+  name: status-reporting
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: status-reporting
+  template:
+    metadata:
+      labels:
+        app: status-reporting
+    spec:
+      containers:
+        - name: status-reporting-container
+          image: mikkelbc/status-reporting:v1
+          ports:
+            - containerPort: 80
+          env:
+            - name: MSSQL_SA_PASSWORD
+              value: pass1234
