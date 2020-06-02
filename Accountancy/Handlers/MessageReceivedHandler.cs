@@ -63,11 +63,25 @@ namespace Accountancy.Handlers
                         }
                     }
 
-                    // var 
+                    var accountingInfo = new AccountingInfo
+                    {
+                        HouseholdModelID = @event.HouseID, BillCategory = @event.Type, NetVal = @event.NetVal,
+                        TimestampDateTime = @event.Timestamp
+                    };
+
+                    _context.BillingInfo.Add(accountingInfo);
+                    _context.SaveChanges();
 
                 }
+
+                _log.Debug("Returning from MessageReceivedHandler");
+                return Task.CompletedTask;
+            }
+            catch (Exception exception)
+            {
+                _log.Error("Failed with exception: " + exception);
+                throw;
             }
         }
-        // not completed - pushing again when done
     }
 }

@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Accountancy.Data;
+using Accountancy.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TECAIS.RabbitMq;
 
 namespace Accountancy
 {
@@ -23,7 +29,22 @@ namespace Accountancy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
+            // conf got rabbitMQ
+            services.AddEventBus();
+            services.AddSingleton<MessageReceivedHandler>();
+            var DB_HostName = Environment.GetEnvironmentVariable("ACCOUNTANCY_SQLSERVER_SERVICE_HOST");
+            var DB_PW = Environment.GetEnvironmentVariable("ACCOUNTANCY_SA_PASSWORD");
+            var connectionString = $"Data Source = {DB_HostName}; User ID = SA; Password = {DB_PW}; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            services.AddDbContext<AccountancyContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Singleton);
+             
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
