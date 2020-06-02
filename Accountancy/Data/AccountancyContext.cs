@@ -18,6 +18,7 @@ namespace Accountancy.Data
         protected override void OnModelCreating(ModelBuilder model)
         {
             model.Entity<AccountingInfo>().ToTable("Accounting Information");
+            model.Entity<HouseholdModel>().ToTable("Household Model");
         }
 
     }

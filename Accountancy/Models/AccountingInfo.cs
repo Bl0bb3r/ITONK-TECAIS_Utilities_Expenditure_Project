@@ -11,7 +11,7 @@ namespace Accountancy.Models
 
         public int HouseholdModelID { get; set; }
 
-        public string Bill { get; set; }
+        public string BillCategory { get; set; }
 
         public double NetVal { get; set; }
 
