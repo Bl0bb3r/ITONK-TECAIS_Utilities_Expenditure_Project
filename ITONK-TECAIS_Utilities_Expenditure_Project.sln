@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accountancy", "Accountancy\Accountancy.csproj", "{AAF47E42-8451-4910-998C-43401CF21C27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Charging", "Charging\Charging.csproj", "{09234507-BEB2-4E31-A5C6-9ECA5F2FBB18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Charging", "Charging\Charging.csproj", "{09234507-BEB2-4E31-A5C6-9ECA5F2FBB18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectricityConsumptionSubmission", "ElectricityConsumptionSubmission\ElectricityConsumptionSubmission.csproj", "{F5035FB6-493A-4FA9-9846-388FEB88EEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricityConsumptionSubmission", "ElectricityConsumptionSubmission\ElectricityConsumptionSubmission.csproj", "{F5035FB6-493A-4FA9-9846-388FEB88EEA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMq", "RabbitMq\RabbitMq.csproj", "{C14E4709-7F6C-4035-8E55-A2C22057AFCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMq", "RabbitMq\RabbitMq.csproj", "{C14E4709-7F6C-4035-8E55-A2C22057AFCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatConsumptionSubmission", "HeatConsumptionSubmission\HeatConsumptionSubmission.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{C14E4709-7F6C-4035-8E55-A2C22057AFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C14E4709-7F6C-4035-8E55-A2C22057AFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C14E4709-7F6C-4035-8E55-A2C22057AFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB4E9D7-41E5-4115-832B-E87B11394ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
