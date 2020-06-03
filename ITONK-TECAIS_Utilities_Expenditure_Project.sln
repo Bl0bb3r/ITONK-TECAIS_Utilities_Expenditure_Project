@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeatConsumptionSubmission",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenditureMeasurements", "ExpenditureMeasurements\ExpenditureMeasurements.csproj", "{60F7A90D-D5EF-4931-9170-E32045C6A3D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenditureMeasurements", "ExpenditureMeasurements\ExpenditureMeasurements.csproj", "{60F7A90D-D5EF-4931-9170-E32045C6A3D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatusReporting", "StatusReporting\StatusReporting.csproj", "{05A3AE51-B7FA-4E98-8554-9ECE38E91935}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatusReporting", "StatusReporting\StatusReporting.csproj", "{05A3AE51-B7FA-4E98-8554-9ECE38E91935}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +49,10 @@ Global
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05A3AE51-B7FA-4E98-8554-9ECE38E91935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05A3AE51-B7FA-4E98-8554-9ECE38E91935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05A3AE51-B7FA-4E98-8554-9ECE38E91935}.Release|Any CPU.ActiveCfg = Release|Any CPU

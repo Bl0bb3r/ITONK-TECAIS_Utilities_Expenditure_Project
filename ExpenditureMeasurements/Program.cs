@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace ExpenditureMeasurements
 {
@@ -37,10 +38,12 @@ namespace ExpenditureMeasurements
 
             while (true)
             {
-                
+                MeasurementReport(households, rabbitMqClient);
+                StatusReport(households, rabbitMqClient);
+                Thread.Sleep(10000);
             }
 
-            private static void MeasurementReport(IEnumerable<Household> households, RabbitMqClient rabbitMqClient)
+            static void MeasurementReport(IEnumerable<Household> households, RabbitMqClient rabbitMqClient)
             {
                 foreach (var house in households)
                 {
@@ -52,7 +55,7 @@ namespace ExpenditureMeasurements
                 }
             }
 
-            private static void StatusReport(IEnumerable<Household> households, RabbitMqClient rabbitMqClient)
+            static void StatusReport(IEnumerable<Household> households, RabbitMqClient rabbitMqClient)
             {
                 foreach (var house in households)
                 {
