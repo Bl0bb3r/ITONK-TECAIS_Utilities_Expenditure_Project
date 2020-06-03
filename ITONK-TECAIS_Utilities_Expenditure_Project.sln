@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricityConsumptionSubmi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMq", "RabbitMq\RabbitMq.csproj", "{C14E4709-7F6C-4035-8E55-A2C22057AFCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatConsumptionSubmission", "HeatConsumptionSubmission\HeatConsumptionSubmission.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeatConsumptionSubmission", "HeatConsumptionSubmission\HeatConsumptionSubmission.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenditureMeasurements", "ExpenditureMeasurements\ExpenditureMeasurements.csproj", "{60F7A90D-D5EF-4931-9170-E32045C6A3D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F7A90D-D5EF-4931-9170-E32045C6A3D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
