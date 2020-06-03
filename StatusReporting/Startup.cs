@@ -2,9 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HeatConsumptionSubmission.Extensions;
-using HeatConsumptionSubmission.Handlers;
-using HeatConsumptionSubmission.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,8 +10,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMq;
+using StatusReporting.Extensions;
+using StatusReporting.Handlers;
 
-namespace HeatConsumptionSubmission
+namespace StatusReporting
 {
     public class Startup
     {
@@ -30,20 +29,8 @@ namespace HeatConsumptionSubmission
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddEventBus();
-            services.AddTransient<MeasurementReceivedEventHandler>();
-            services.AddTransient<IChargingService, ChargingService>();
-            services.AddTransient<IPricingService, PricingService>();
-            services.AddHttpClient<IChargingService, ChargingService>(sp =>
-            {
-                var chargingServiceHostName =
-                    Environment.GetEnvironmentVariable("CHARGING_LOADBALANCER_SERVICE_HOST");
-                var chargingServiceBaseUrl = $"http://{chargingServiceHostName}/api/";
-                sp.BaseAddress = new Uri(chargingServiceBaseUrl);
-            });
-            services.AddHttpClient<IPricingService, PricingService>(sp =>
-            {
-                sp.BaseAddress = new Uri("http://api.eia.gov/");
-            });
+            services.AddTransient<StatusMessageReceivedHandler>();
+            services.ConfigureDbContext();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
