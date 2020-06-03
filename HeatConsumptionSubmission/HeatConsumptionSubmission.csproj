@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ElectricityConsumptionSubmission\ElectricityConsumptionSubmission.csproj" />
     <ProjectReference Include="..\RabbitMq\RabbitMq.csproj" />
   </ItemGroup>
