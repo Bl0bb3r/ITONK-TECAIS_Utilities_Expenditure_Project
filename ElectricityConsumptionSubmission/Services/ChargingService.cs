@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using ElectricityConsumptionSubmission.Models;
+using ElectricityExpenditure.Models;
 using log4net;
 using Newtonsoft.Json;
 
-namespace ElectricityConsumptionSubmission.Services
+namespace ElectricityExpenditure.Services
 {
     public class ChargingService : IChargingService
     {

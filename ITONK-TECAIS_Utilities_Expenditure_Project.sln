@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accountancy", "Accountancy\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Charging", "Charging\Charging.csproj", "{09234507-BEB2-4E31-A5C6-9ECA5F2FBB18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricityConsumptionSubmission", "ElectricityConsumptionSubmission\ElectricityConsumptionSubmission.csproj", "{F5035FB6-493A-4FA9-9846-388FEB88EEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElectricityExpenditure", "ElectricityConsumptionSubmission\ElectricityExpenditure.csproj", "{F5035FB6-493A-4FA9-9846-388FEB88EEA6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMq", "RabbitMq\RabbitMq.csproj", "{C14E4709-7F6C-4035-8E55-A2C22057AFCA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeatConsumptionSubmission", "HeatConsumptionSubmission\HeatConsumptionSubmission.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeatExpenditure", "HeatConsumptionSubmission\HeatExpenditure.csproj", "{4CB4E9D7-41E5-4115-832B-E87B11394ABC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterConsumptionSubmission", "WaterConsumptionSubmission\WaterConsumptionSubmission.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaterExpenditure", "WaterConsumptionSubmission\WaterExpenditure.csproj", "{DDD7A55F-B9A2-4E53-8C5B-7213217ED09E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenditureMeasurements", "ExpenditureMeasurements\ExpenditureMeasurements.csproj", "{60F7A90D-D5EF-4931-9170-E32045C6A3D1}"
 EndProject

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ElectricityConsumptionSubmission.Extensions;
-using ElectricityConsumptionSubmission.Handlers;
-using ElectricityConsumptionSubmission.Services;
+using ElectricityExpenditure.Extensions;
+using ElectricityExpenditure.Handlers;
+using ElectricityExpenditure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMq;
 
-namespace ElectricityConsumptionSubmission
+namespace ElectricityExpenditure
 {
     public class Startup
     {

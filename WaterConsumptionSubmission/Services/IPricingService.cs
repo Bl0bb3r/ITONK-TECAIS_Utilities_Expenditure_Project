@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WaterConsumptionSubmission.Models;
+using WaterExpenditure.Models;
 
-namespace WaterConsumptionSubmission.Services
+namespace WaterExpenditure.Services
 {
     public interface IPricingService
     {

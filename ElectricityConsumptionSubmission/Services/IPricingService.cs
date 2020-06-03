@@ -1,10 +1,10 @@
-﻿using ElectricityConsumptionSubmission.Models;
+﻿using ElectricityExpenditure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ElectricityConsumptionSubmission.Services
+namespace ElectricityExpenditure.Services
 {
     public interface IPricingService
     {

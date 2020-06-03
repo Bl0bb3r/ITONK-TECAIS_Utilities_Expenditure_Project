@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WaterConsumptionSubmission.Controllers
+namespace WaterExpenditure.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

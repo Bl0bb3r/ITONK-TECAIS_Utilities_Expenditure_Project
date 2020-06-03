@@ -1,4 +1,4 @@
-﻿using HeatConsumptionSubmission.Models;
+﻿using HeatExpenditure.Models;
 using log4net;
 using Newtonsoft.Json;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace HeatConsumptionSubmission.Services
+namespace HeatExpenditure.Services
 {
     public class ChargingService : IChargingService
     {

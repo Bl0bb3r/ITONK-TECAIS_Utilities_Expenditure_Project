@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using WaterConsumptionSubmission.Models.Events;
-using WaterConsumptionSubmission.Handlers;
+using WaterExpenditure.Models.Events;
+using WaterExpenditure.Handlers;
 
-namespace WaterConsumptionSubmission.Extensions
+namespace WaterExpenditure.Extensions
 {
     public static class ApplicationBuilderExtensions
     {

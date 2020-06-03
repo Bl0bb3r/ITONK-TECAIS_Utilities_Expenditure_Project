@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using WaterConsumptionSubmission.Models;
+using WaterExpenditure.Models;
 
-namespace WaterConsumptionSubmission.Services
+namespace WaterExpenditure.Services
 {
     public class ChargingService : IChargingService
     {

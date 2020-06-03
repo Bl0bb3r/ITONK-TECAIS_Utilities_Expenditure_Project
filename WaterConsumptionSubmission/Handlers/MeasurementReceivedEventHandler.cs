@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WaterConsumptionSubmission.Models;
-using WaterConsumptionSubmission.Models.Events;
-using WaterConsumptionSubmission.Services;
+using WaterExpenditure.Models;
+using WaterExpenditure.Models.Events;
+using WaterExpenditure.Services;
 
-namespace WaterConsumptionSubmission.Handlers
+namespace WaterExpenditure.Handlers
 {
     public class MeasurementReceivedEventHandler : IEventHandler<Measurement>
     {

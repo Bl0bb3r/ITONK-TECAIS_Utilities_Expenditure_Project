@@ -1,11 +1,11 @@
-﻿using HeatConsumptionSubmission.Models.Events;
+﻿using HeatExpenditure.Models.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMq;
-using HeatConsumptionSubmission.Handlers;
+using HeatExpenditure.Handlers;
 
-namespace HeatConsumptionSubmission.Extensions
+namespace HeatExpenditure.Extensions
 {
     public static class ApplicationBuilderExtensions
     {

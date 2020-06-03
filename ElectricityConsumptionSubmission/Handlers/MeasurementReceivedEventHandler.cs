@@ -1,11 +1,11 @@
-﻿using ElectricityConsumptionSubmission.Models;
-using ElectricityConsumptionSubmission.Models.Events;
-using ElectricityConsumptionSubmission.Services;
+﻿using ElectricityExpenditure.Models;
+using ElectricityExpenditure.Models.Events;
+using ElectricityExpenditure.Services;
 using log4net;
 using RabbitMq;
 using System.Threading.Tasks;
 
-namespace ElectricityConsumptionSubmission.Handlers
+namespace ElectricityExpenditure.Handlers
 {
     public class MeasurementReceivedEventHandler : IEventHandler<Measurement>
     {

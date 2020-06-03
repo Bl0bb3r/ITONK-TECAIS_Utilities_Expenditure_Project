@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
-COPY ["ElectricityConsumptionSubmission/ElectricityConsumptionSubmission.csproj", "ElectricityConsumptionSubmission/"]
-RUN dotnet restore "ElectricityConsumptionSubmission/ElectricityConsumptionSubmission.csproj"
+COPY ["ElectricityExpenditure/ElectricityExpenditure.csproj", "ElectricityExpenditure/"]
+RUN dotnet restore "ElectricityExpenditure/ElectricityExpenditure.csproj"
 COPY . .
-WORKDIR "/src/ElectricityConsumptionSubmission"
-RUN dotnet build "ElectricityConsumptionSubmission.csproj" -c Release -o /app/build
+WORKDIR "/src/ElectricityExpenditure"
+RUN dotnet build "ElectricityExpenditure.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ElectricityConsumptionSubmission.csproj" -c Release -o /app/publish
+RUN dotnet publish "ElectricityExpenditure.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ElectricityConsumptionSubmission.dll"]
+ENTRYPOINT ["dotnet", "ElectricityExpenditure.dll"]

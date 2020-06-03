@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ElectricityConsumptionSubmission.Models;
+using ElectricityExpenditure.Models;
 
-namespace ElectricityConsumptionSubmission.Services
+namespace ElectricityExpenditure.Services
 {
     public interface IChargingService
     {

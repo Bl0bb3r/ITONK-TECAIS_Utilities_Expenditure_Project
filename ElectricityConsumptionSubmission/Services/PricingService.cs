@@ -1,4 +1,4 @@
-﻿using ElectricityConsumptionSubmission.Models;
+﻿using ElectricityExpenditure.Models;
 using log4net;
 using Newtonsoft.Json;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ElectricityConsumptionSubmission.Services
+namespace ElectricityExpenditure.Services
 {
     public class PricingService : IPricingService
     {

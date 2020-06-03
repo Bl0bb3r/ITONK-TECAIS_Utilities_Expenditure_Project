@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HeatConsumptionSubmission.Models
+namespace HeatExpenditure.Models
 {
     public class ChargingInformation
     {

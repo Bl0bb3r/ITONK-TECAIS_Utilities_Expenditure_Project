@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HeatConsumptionSubmission.Controllers
+namespace HeatExpenditure.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

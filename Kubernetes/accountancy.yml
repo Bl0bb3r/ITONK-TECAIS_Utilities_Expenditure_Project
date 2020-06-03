@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: itonk_tecais
-  name: accounting-service
+  namespace: tecaisgrp3
+  name: accountancy-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: accounting-service
+      app: accountancy-service
   template:
     metadata:
       labels:
-        app: accounting-service
+        app: accountancy-service
     spec:
       containers:
-        - name: accounting-service-container
-          image: mikkelbc/accounting:v1
+        - name: accountancy-service-container
+          image: mikkelbc/accountancy:v1
           ports:
             - containerPort: 80
             - containerPort: 443
@@ -30,8 +30,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: accounting-loadbalancer
-  namespace: itonk_tecais
+  name: accountancy-loadbalancer
+  namespace: tecaisgrp3
 spec:
   type: LoadBalancer
   ports:
@@ -44,4 +44,4 @@ spec:
       port: 443
       targetPort: 443
   selector:
-    app: accounting-service
+    app: accountancy-service

@@ -10,11 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMq;
-using WaterConsumptionSubmission.Extensions;
-using WaterConsumptionSubmission.Handlers;
-using WaterConsumptionSubmission.Services;
+using WaterExpenditure.Extensions;
+using WaterExpenditure.Handlers;
+using WaterExpenditure.Services;
 
-namespace WaterConsumptionSubmission
+namespace WaterExpenditure
 {
     public class Startup
     {

@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: accounting-sqlserver
-  namespace: itonk_tecais
+  name: accountancy-sqlserver
+  namespace: tecaisgrp3
 spec:
   selector:
-    app: accounting-db
+    app: accountancy-db
   ports:
     - protocol: TCP
       port: 1433
@@ -15,17 +15,17 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: accounting-db
-  namespace: itonk_tecais
+  name: accountancy-db
+  namespace: tecaisgrp3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: accounting-db
+      app: accountancy-db
   template:
     metadata:
       labels:
-        app: accounting-db
+        app: accountancy-db
     spec:
       terminationGracePeriodSeconds: 10
       containers:
@@ -41,9 +41,9 @@ spec:
             - name: MSSQL_SA_PASSWORD
               value: pass1234
           volumeMounts:
-            - name: accounting-sql-vol
+            - name: accountancy-sql-vol
               mountPath: /var/opt/mssql
       volumes:
-        - name: accounting-sql-vol
+        - name: accountancy-sql-vol
           persistentVolumeClaim:
-            claimName: accounting-sql-db-pvc
+            claimName: accountancy-sql-db-pvc

@@ -1,11 +1,11 @@
-﻿using ElectricityConsumptionSubmission.Handlers;
-using ElectricityConsumptionSubmission.Models.Events;
+﻿using ElectricityExpenditure.Handlers;
+using ElectricityExpenditure.Models.Events;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using RabbitMq;
 
-namespace ElectricityConsumptionSubmission.Extensions
+namespace ElectricityExpenditure.Extensions
 {
     public static class ApplicationBuilderExtension
     {

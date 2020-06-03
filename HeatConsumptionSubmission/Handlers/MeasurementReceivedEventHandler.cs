@@ -1,13 +1,13 @@
-﻿using HeatConsumptionSubmission.Models;
-using HeatConsumptionSubmission.Models.Events;
-using HeatConsumptionSubmission.Services;
+﻿using HeatExpenditure.Models;
+using HeatExpenditure.Models.Events;
+using HeatExpenditure.Services;
 using RabbitMq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HeatConsumptionSubmission.Handlers
+namespace HeatExpenditure.Handlers
 {
     public class MeasurementReceivedEventHandler : IEventHandler<Measurement>
     {

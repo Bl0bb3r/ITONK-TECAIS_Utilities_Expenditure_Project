@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
-COPY ["HeatConsumptionSubmission/HeatConsumptionSubmission.csproj", "HeatConsumptionSubmission/"]
-RUN dotnet restore "HeatConsumptionSubmission/HeatConsumptionSubmission.csproj"
+COPY ["HeatExpenditure/HeatExpenditure.csproj", "HeatExpenditure/"]
+RUN dotnet restore "HeatExpenditure/HeatExpenditure.csproj"
 COPY . .
-WORKDIR "/src/HeatConsumptionSubmission"
-RUN dotnet build "HeatConsumptionSubmission.csproj" -c Release -o /app/build
+WORKDIR "/src/HeatExpenditure"
+RUN dotnet build "HeatExpenditure.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "HeatConsumptionSubmission.csproj" -c Release -o /app/publish
+RUN dotnet publish "HeatExpenditure.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "HeatConsumptionSubmission.dll"]
+ENTRYPOINT ["dotnet", "HeatExpenditure.dll"]
