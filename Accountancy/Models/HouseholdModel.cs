@@ -11,6 +11,6 @@ namespace Accountancy.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public IEnumerable<AccountingInfo> Invoices { get; set; }
+        public IEnumerable<AccountancyInfo> Invoices { get; set; }
     }
 }

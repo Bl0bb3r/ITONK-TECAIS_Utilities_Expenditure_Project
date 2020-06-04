@@ -11,13 +11,13 @@ namespace Accountancy.Data
     {
         public AccountancyContext(DbContextOptions<AccountancyContext> options) : base(options) { }
 
-        public DbSet<AccountingInfo> BillingInfo { get; set; }
+        public DbSet<AccountancyInfo> BillingInfo { get; set; }
 
         public DbSet<HouseholdModel> Households { get; set; }
 
         protected override void OnModelCreating(ModelBuilder model)
         {
-            model.Entity<AccountingInfo>().ToTable("Accounting Information");
+            model.Entity<AccountancyInfo>().ToTable("Accounting Information");
             model.Entity<HouseholdModel>().ToTable("Household Model");
         }
 

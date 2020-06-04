@@ -63,7 +63,7 @@ namespace Accountancy.Handlers
                         }
                     }
 
-                    var accountingInfo = new AccountingInfo
+                    var accountingInfo = new AccountancyInfo
                     {
                         HouseholdModelID = @event.HouseID, BillCategory = @event.Type, NetVal = @event.NetVal,
                         TimestampDateTime = @event.Timestamp

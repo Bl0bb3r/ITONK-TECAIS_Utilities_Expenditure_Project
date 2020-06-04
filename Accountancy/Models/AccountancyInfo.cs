@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Accountancy.Models
 {
-    public class AccountingInfo
+    public class AccountancyInfo
     {
         public int ID { get; set; }
 

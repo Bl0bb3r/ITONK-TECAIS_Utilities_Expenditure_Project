@@ -41,19 +41,19 @@ namespace Accountancy.Data
                 context.Database.CloseConnection();
             }
 
-            var UtilityBills = new AccountingInfo[]
+            var UtilityBills = new AccountancyInfo[]
             {
-                new AccountingInfo{HouseholdModelID = 500, BillCategory = "Water", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 500, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 500, BillCategory = "Electricity", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 1000, BillCategory = "Water", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 1000, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 1000, BillCategory = "Electricity", NetVal = 500, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 1500, BillCategory = "Water", NetVal = 0, TimestampDateTime = DateTime.Now},
-                new AccountingInfo{HouseholdModelID = 1500, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now}
+                new AccountancyInfo{HouseholdModelID = 500, BillCategory = "Water", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 500, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 500, BillCategory = "Electricity", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 1000, BillCategory = "Water", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 1000, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 1000, BillCategory = "Electricity", NetVal = 500, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 1500, BillCategory = "Water", NetVal = 0, TimestampDateTime = DateTime.Now},
+                new AccountancyInfo{HouseholdModelID = 1500, BillCategory = "Heat", NetVal = 500, TimestampDateTime = DateTime.Now}
 
             };
-            foreach (AccountingInfo Ai in UtilityBills)
+            foreach (AccountancyInfo Ai in UtilityBills)
             {
                 context.BillingInfo.Add(Ai);
             }
