@@ -29,8 +29,8 @@ namespace ExpenditureMeasurements
                 }),
                 new Household(3, new List<MeasurementDevice>
                 {
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Heat, "FGHIJ456", "Kamstrup", 222),
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Electricity, "FGHIJ456", "Kamstrup",
+                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Heat, "UVXYZ789", "Kamstrup", 222),
+                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Electricity, "UVXYZ789", "Kamstrup",
                         333),
 
                 })
@@ -40,7 +40,7 @@ namespace ExpenditureMeasurements
             {
                 MeasurementReport(households, rabbitMqClient);
                 StatusReport(households, rabbitMqClient);
-                Thread.Sleep(10000);
+                Thread.Sleep(8000);
             }
 
             static void MeasurementReport(IEnumerable<Household> households, RabbitMqClient rabbitMqClient)
