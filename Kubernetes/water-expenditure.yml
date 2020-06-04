@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: tecaisgrp3
-  name: heat-consumption-submission
+  name: water-expenditure
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: heat-consumption-submission
+      app: water-expenditure
   template:
     metadata:
       labels:
-        app: heat-consumption-submission
+        app: water-expenditure
     spec:
       containers:
-        - name: heat-consumption-submission-app
-          image: mikkelbc/heat-consumption-submission:v1
+        - name: water-expenditure-container
+          image: mikkelbc/water-expenditure:v1
           ports:
             - containerPort: 80

@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WaterExpenditure/WaterExpenditure.csproj", "WaterExpenditure/"]
+COPY "." "WaterExpenditure/"
 RUN dotnet restore "WaterExpenditure/WaterExpenditure.csproj"
 COPY . .
 WORKDIR "/src/WaterExpenditure"

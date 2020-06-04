@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: tecaisgrp3
-  name: water-consumption-submission
+  name: electricity-expenditure
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: water-consumption-submission
+      app: electricity-expenditure
   template:
     metadata:
       labels:
-        app: water-consumption-submission
+        app: electricity-expenditure
     spec:
       containers:
-        - name: water-consumption-submission-container
-          image: mikkelbc/water-consumption-submission:v1
+        - name: electricity-expenditure-container
+          image: mikkelbc/electricity-expenditure:v1
           ports:
             - containerPort: 80
