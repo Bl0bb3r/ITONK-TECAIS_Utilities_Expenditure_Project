@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: rabbitmq
-  namespace: itonk_tecais
+  namespace: tecaisgrp3
 ---
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1beta1
@@ -19,7 +19,7 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: endpoint-reader
-  namespace: itonk_tecais
+  namespace: tecaisgrp3
 subjects:
   - kind: ServiceAccount
     name: rabbitmq

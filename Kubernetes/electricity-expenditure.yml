@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tecaisgrp3
+  name: electricity-expenditure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: electricity-expenditure
+  template:
+    metadata:
+      labels:
+        app: electricity-expenditure
+    spec:
+      containers:
+        - name: electricity-expenditure-container
+          image: mikkelbc/electricity-expenditure:v1
+          ports:
+            - containerPort: 80

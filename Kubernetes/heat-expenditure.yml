@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tecaisgrp3
+  name: heat-expenditure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: heat-expenditure
+  template:
+    metadata:
+      labels:
+        app: heat-expenditure
+    spec:
+      containers:
+        - name: heat-expenditure-app
+          image: mikkelbc/heat-expenditure:v1
+          ports:
+            - containerPort: 80

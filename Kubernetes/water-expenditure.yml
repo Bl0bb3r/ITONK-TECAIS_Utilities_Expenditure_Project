@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tecaisgrp3
+  name: water-expenditure
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: water-expenditure
+  template:
+    metadata:
+      labels:
+        app: water-expenditure
+    spec:
+      containers:
+        - name: water-expenditure-container
+          image: mikkelbc/water-expenditure:v1
+          ports:
+            - containerPort: 80

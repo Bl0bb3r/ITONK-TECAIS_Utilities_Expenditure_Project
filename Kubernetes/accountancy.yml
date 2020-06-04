@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tecaisgrp3
+  name: accountancy-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accountancy-service
+  template:
+    metadata:
+      labels:
+        app: accountancy-service
+    spec:
+      containers:
+        - name: accountancy-service-container
+          image: mikkelbc/accountancy:v1
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+          env:
+            - name: MSSQL_PID
+              value: "Developer"
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: ACCOUNTING_SA_PASSWORD
+              value: pass1234
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accountancy-loadbalancer
+  namespace: tecaisgrp3
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 443
+  selector:
+    app: accountancy-service
