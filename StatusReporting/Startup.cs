@@ -27,7 +27,7 @@ namespace StatusReporting
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddMvc(x => x.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Latest);
             services.AddEventBus();
             services.AddTransient<StatusMessageReceivedHandler>();
             services.ConfigureDbContext();
