@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: charging-service-container
-          image: mikkelbc/charging-service:v1
+          image: mikkelbc/charging:v3
           ports:
             - containerPort: 80
             - containerPort: 443

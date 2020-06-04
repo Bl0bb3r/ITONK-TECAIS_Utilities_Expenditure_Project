@@ -9,7 +9,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: endpoint-reader
-  namespace: itonk_tecais
+  namespace: tecaisgrp3
 rules:
   - apiGroups: [""]
     resources: ["endpoints"]

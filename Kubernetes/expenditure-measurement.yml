@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: tecaisgrp3
-  name: measurement-generator
+  name: expenditure-measurement
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: measurement-generator
+      app: expenditure-measurement
   template:
     metadata:
       labels:
-        app: measurement-generator
+        app: expenditure-measurement
     spec:
       containers:
-        - name: measurement-generator-app
-          image: mikkelbc/generator:v1
+        - name: expenditure-measurement-app
+          image: mikkelbc/expenditure:v1
           ports:
             - containerPort: 80
