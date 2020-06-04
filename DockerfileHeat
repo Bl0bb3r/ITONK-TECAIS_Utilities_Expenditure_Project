@@ -7,16 +7,17 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY "." "WaterExpenditure/"
-RUN dotnet restore "WaterExpenditure/WaterExpenditure.csproj"
+COPY ["HeatExpenditure/HeatExpenditure.csproj", "HeatExpenditure/"]
+COPY ["RabbitMq/RabbitMq.csproj", "RabbitMq/"]
+RUN dotnet restore "HeatExpenditure/HeatExpenditure.csproj"
 COPY . .
-WORKDIR "/src/WaterExpenditure"
-RUN dotnet build "WaterExpenditure.csproj" -c Release -o /app/build
+WORKDIR "/src/HeatExpenditure"
+RUN dotnet build "HeatExpenditure.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WaterExpenditure.csproj" -c Release -o /app/publish
+RUN dotnet publish "HeatExpenditure.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "WaterExpenditure.dll"]
+ENTRYPOINT ["dotnet", "HeatExpenditure.dll"]
