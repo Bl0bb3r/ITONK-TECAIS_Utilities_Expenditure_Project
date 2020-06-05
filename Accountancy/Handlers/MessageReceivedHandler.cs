@@ -7,7 +7,7 @@ using Accountancy.Models;
 using Accountancy.Models.Events;
 using log4net;
 using Microsoft.EntityFrameworkCore;
-using TECAIS.RabbitMq;
+using RabbitMq;
 
 namespace Accountancy.Handlers
 {
