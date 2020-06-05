@@ -21,7 +21,7 @@ namespace Accountancy.Data
             var households = new HouseholdModel[]
             {
                 new HouseholdModel{ID = 500}, new HouseholdModel{ID = 1000}, new HouseholdModel{ID = 1500}
-                
+
             };
 
             foreach (HouseholdModel Hm in households)
@@ -36,7 +36,8 @@ namespace Accountancy.Data
                 context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel ON");
                 context.SaveChanges();
                 context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel OFF");
-            } finally
+            }
+            finally
             {
                 context.Database.CloseConnection();
             }
