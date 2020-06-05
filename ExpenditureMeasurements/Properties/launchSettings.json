@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ExpenditureMeasurements": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
