@@ -7,7 +7,7 @@ using Accountancy.Models.Events;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using TECAIS.RabbitMq;
+using RabbitMq;
 
 namespace Accountancy.Extensions
 {

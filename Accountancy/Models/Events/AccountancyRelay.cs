@@ -1,8 +1,8 @@
-﻿using System;
+﻿using RabbitMq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TECAIS.RabbitMq;
 
 namespace Accountancy.Models.Events
 {
