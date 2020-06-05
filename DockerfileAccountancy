@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["Accountancy/Accountancy.csproj", "Accountancy/"]
+COPY ["RabbitMq/RabbitMq.csproj", "RabbitMq/"]
 RUN dotnet restore "Accountancy/Accountancy.csproj"
 COPY . .
 WORKDIR "/src/Accountancy"
