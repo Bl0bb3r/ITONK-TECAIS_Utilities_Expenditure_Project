@@ -1,19 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using Accountancy.Data;
 using Accountancy.Models;
 using Accountancy.Models.Events;
 using log4net;
 using Microsoft.EntityFrameworkCore;
 using RabbitMq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Accountancy.Handlers
 {
     public class MessageReceivedHandler : IEventHandler<AccountancyRelay>
     {
-
         private static readonly ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         private readonly AccountancyContext _context;
@@ -31,7 +31,7 @@ namespace Accountancy.Handlers
                 if (@event.HouseID != 0)
                 {
                     _log.Debug("Entering if-statement(@event.HouseID): " + @event.HouseID);
-                    HouseholdModel House = new HouseholdModel {ID = @event.HouseID};
+                    HouseholdModel House = new HouseholdModel { ID = @event.HouseID };
 
                     List<HouseholdModel> HouseList = _context.Households.ToList();
                     bool exists = false;
@@ -53,9 +53,9 @@ namespace Accountancy.Handlers
 
                         try
                         {
-                            _context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel ON");
+                            _context.Database.ExecuteSqlRaw(@"SET IDENTITY_INSERT HouseholdModel ON");
                             _context.SaveChanges();
-                            _context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel OFF");
+                            _context.Database.ExecuteSqlRaw(@"SET IDENTITY_INSERT HouseholdModel OFF");
                         }
                         finally
                         {
@@ -65,7 +65,9 @@ namespace Accountancy.Handlers
 
                     var accountingInfo = new AccountancyInfo
                     {
-                        HouseholdModelID = @event.HouseID, BillCategory = @event.Type, NetVal = @event.NetVal,
+                        HouseholdModelID = @event.HouseID,
+                        BillCategory = @event.Type,
+                        NetVal = @event.NetVal,
                         TimestampDateTime = @event.Timestamp
                     };
 

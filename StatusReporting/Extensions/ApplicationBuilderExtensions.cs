@@ -7,6 +7,7 @@ using StatusReporting.Handlers;
 using Microsoft.AspNetCore.Hosting;
 using StatusReporting.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 
 namespace StatusReporting.Extensions
 {
@@ -15,7 +16,7 @@ namespace StatusReporting.Extensions
         public static IApplicationBuilder ConfigureEventBus(this IApplicationBuilder app)
         {
             var eventBus = app.ApplicationServices.GetService<IEventBus>();
-            var applicationLifeTime = app.ApplicationServices.GetService<IApplicationLifetime>();
+            var applicationLifeTime = app.ApplicationServices.GetService<IHostApplicationLifetime>();
             eventBus.Subscribe<StatusReportMessage, StatusMessageReceivedHandler>("status");
             applicationLifeTime.ApplicationStopping.Register(() => OnStopping(eventBus));
             return app;

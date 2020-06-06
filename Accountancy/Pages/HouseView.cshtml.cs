@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Accountancy.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Accountancy.Data;
-using Accountancy.Models;
 
 namespace Accountancy.Pages
 {
@@ -19,7 +18,7 @@ namespace Accountancy.Pages
             _context = context;
         }
 
-        public IList<HouseholdModel> HouseholdModel { get;set; }
+        public IList<HouseholdModel> HouseholdModel { get; set; }
         public IList<AccountancyInfo> Bills { get; set; }
 
         public async Task OnGetAsync()

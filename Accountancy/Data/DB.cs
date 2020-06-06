@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Accountancy.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Accountancy.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace Accountancy.Data
 {
@@ -33,9 +33,9 @@ namespace Accountancy.Data
 
             try
             {
-                context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel ON");
+                context.Database.ExecuteSqlRaw(@"SET IDENTITY_INSERT HouseholdModel ON");
                 context.SaveChanges();
-                context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT HouseholdModel OFF");
+                context.Database.ExecuteSqlRaw(@"SET IDENTITY_INSERT HouseholdModel OFF");
             }
             finally
             {

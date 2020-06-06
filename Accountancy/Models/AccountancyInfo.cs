@@ -16,6 +16,5 @@ namespace Accountancy.Models
         public double NetVal { get; set; }
 
         public DateTime TimestampDateTime { get; set; }
-
     }
 }

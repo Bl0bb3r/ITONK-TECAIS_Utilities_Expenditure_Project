@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: accountancy-service-container
-          image: mikkelbc/accountancy:v4
+          image: mikkelbc/accountancy:v9
           ports:
             - containerPort: 80
             - containerPort: 443

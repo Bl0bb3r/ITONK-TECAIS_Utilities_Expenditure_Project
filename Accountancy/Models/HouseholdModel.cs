@@ -8,7 +8,7 @@ namespace Accountancy.Models
 {
     public class HouseholdModel
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         public IEnumerable<AccountancyInfo> Invoices { get; set; }

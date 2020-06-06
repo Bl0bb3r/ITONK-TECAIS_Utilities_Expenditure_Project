@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace HeatExpenditure.Extensions
 {
@@ -16,7 +17,7 @@ namespace HeatExpenditure.Extensions
         public static IApplicationBuilder ConfigureEventBus(this IApplicationBuilder app)
         {
             var eventBus = app.ApplicationServices.GetService<IEventBus>();
-            var applicationLifeTime = app.ApplicationServices.GetService<IApplicationLifetime>();
+            var applicationLifeTime = app.ApplicationServices.GetService<IHostApplicationLifetime>();
             eventBus.Subscribe<Measurement, MeasurementReceivedEventHandler>("heat");
             applicationLifeTime.ApplicationStopping.Register(() => OnStopping(eventBus));
             return app;

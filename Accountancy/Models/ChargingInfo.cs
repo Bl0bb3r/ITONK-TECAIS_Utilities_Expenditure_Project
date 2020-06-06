@@ -11,9 +11,8 @@ namespace Accountancy.Models
 
         public Guid UtilityConsumerID { get; set; }
 
-        public IReadOnlyList<double>ChargesList { get; set; }
+        public IReadOnlyList<double> ChargesList { get; set; }
 
         public DateTime Timestamp { get; set; }
-
     }
 }
