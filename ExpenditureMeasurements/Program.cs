@@ -21,16 +21,16 @@ namespace ExpenditureMeasurements
                 }),
                 new Household(2, new List<MeasurementDevice>
                 {
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Water, "FGHIJ456", "Kamstrup", 111),
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Heat, "FGHIJ456", "Kamstrup", 222),
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Electricity, "FGHIJ456", "Kamstrup",
+                    new MeasurementDevice(Guid.NewGuid(), 2, MeasurementCategory.Water, "FGHIJ456", "Kamstrup", 111),
+                    new MeasurementDevice(Guid.NewGuid(), 2, MeasurementCategory.Heat, "FGHIJ456", "Kamstrup", 222),
+                    new MeasurementDevice(Guid.NewGuid(), 2, MeasurementCategory.Electricity, "FGHIJ456", "Kamstrup",
                         333),
 
                 }),
                 new Household(3, new List<MeasurementDevice>
                 {
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Heat, "UVXYZ789", "Kamstrup", 222),
-                    new MeasurementDevice(Guid.NewGuid(), 1, MeasurementCategory.Electricity, "UVXYZ789", "Kamstrup",
+                    new MeasurementDevice(Guid.NewGuid(), 3, MeasurementCategory.Heat, "UVXYZ789", "Kamstrup", 222),
+                    new MeasurementDevice(Guid.NewGuid(), 3, MeasurementCategory.Electricity, "UVXYZ789", "Kamstrup",
                         333),
 
                 })
