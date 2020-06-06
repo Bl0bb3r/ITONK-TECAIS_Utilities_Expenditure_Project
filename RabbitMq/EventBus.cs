@@ -39,7 +39,7 @@ namespace RabbitMq
         {
             using (var channel = _connection.CreateModel())
             {
-channel.ExchangeDeclare(exchange: ExchangeName, type: "direct");
+                channel.ExchangeDeclare(exchange: ExchangeName, type: "direct");
                 var message = JsonConvert.SerializeObject(@event);
                 var body = Encoding.UTF8.GetBytes(message);
 
